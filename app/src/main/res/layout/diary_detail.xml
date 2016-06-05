@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--日记详情-->
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            app:title="Reading"
+            android:navigationIcon="@drawable/ic_action_back"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+<TextView
+    android:id="@+id/tv_title"
+    android:text="日记标题"
+    android:layout_gravity="center"
+    android:layout_margin="16dp"
+    android:textSize="24sp"
+    android:textColor="@color/colorAccentOrange_500"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginLeft="12dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary_500"
+        android:text="July 30,2016"
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="6dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary_500"
+        android:text="Wendnesday 2:00 pm"
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:textSize="18dp"
+        android:textColor="@color/grey_700"
+        android:text="Wendnesday 2:00 pmsssssssssssssssssssssssss"
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </ScrollView>
+</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

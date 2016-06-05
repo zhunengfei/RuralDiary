@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/item_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="#ffffff"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="4dp"
+        card_view:cardMaxElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_diarytitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/itemtitle_margin"
+                android:layout_marginTop="@dimen/itemtitle_margin"
+                android:text="欢迎使用田园日记"
+                android:textColor="@color/grey_900"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_diarycontent"
+                android:textColor="@color/grey_700"
+                android:layout_margin="@dimen/itemtitle_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="在这里记录下你起伏不定的心情吧" />
+
+            <TextView
+                android:id="@+id/tv_diarydate"
+                android:layout_marginLeft="@dimen/itemtitle_margin"
+                android:textColor="@color/grey_700"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016-05-30" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

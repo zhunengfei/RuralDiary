@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RuralDiary</string>
+    <string name="search_hint">搜索日记</string>
+</resources>
