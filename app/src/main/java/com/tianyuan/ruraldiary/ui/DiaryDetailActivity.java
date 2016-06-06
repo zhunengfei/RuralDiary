@@ -37,7 +37,10 @@ public class DiaryDetailActivity extends AppCompatActivity implements IDetailVie
         detailPresenter.onInitView();
         detailPresenter.onSetData();
     }
-
+    @Override
+    protected void onRestart(){
+        super.onRestart();
+    }
     @Override
     public void initViews() {
         //初始化控件
@@ -79,6 +82,7 @@ public class DiaryDetailActivity extends AppCompatActivity implements IDetailVie
 
         if (id == R.id.action_update) {
             //修改操作
+            detailPresenter.onUpdate(this,diary);
             return true;
         }
         return super.onOptionsItemSelected(item);

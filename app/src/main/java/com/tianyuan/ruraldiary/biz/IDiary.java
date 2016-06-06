@@ -25,4 +25,11 @@ public interface IDiary {
      * @param diary
      */
     void insertDiary(Diary diary);
+
+    /**
+     * 更新id==id的日记
+     * @param id
+     * @param diary
+     */
+    void updateDiary(int id,Diary diary);
 }

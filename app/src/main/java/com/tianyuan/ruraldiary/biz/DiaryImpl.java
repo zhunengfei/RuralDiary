@@ -39,11 +39,13 @@ public class DiaryImpl implements IDiary{
         Cursor cursor=sqLiteDatabase.query("diary",null,null,null,null,null,null);
         if(cursor.moveToFirst()){
             do {
+                int id=cursor.getInt(cursor.getColumnIndex("id"));
                 String title = cursor.getString(cursor.getColumnIndex("title"));
                 String content = cursor.getString(cursor.getColumnIndex("content"));
                 String createtime = cursor.getString(cursor.getColumnIndex("createtime"));
                 String week=cursor.getString(cursor.getColumnIndex("week"));
                 Diary diary=new Diary();
+                diary.setId(id);
                 diary.setTitle(title);
                 diary.setContent(content);
                 diary.setCreatetime(createtime);
@@ -73,4 +75,16 @@ public class DiaryImpl implements IDiary{
         sqLiteDatabase.insert("diary",null,values);
         values.clear();
     }
+
+    @Override
+    public void updateDiary(int id,Diary diary) {
+        sqLiteDatabase=dataBaseHelper.getWritableDatabase();
+        ContentValues contentValues=new ContentValues();
+        contentValues.put("title",diary.getTitle());
+        contentValues.put("content",diary.getContent());
+        contentValues.put("week",diary.getWeek());
+        contentValues.put("createtime",diary.getCreatetime());
+        sqLiteDatabase.update("diary",contentValues,"id=?",new String[]{String.valueOf(id)});
+    }
+
 }

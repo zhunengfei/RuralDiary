@@ -41,6 +41,12 @@
             android:label="AddDiary"
             >
         </activity>
+        <!--更新日记界面-->
+        <activity android:name=".ui.UpdateDiaryActivity"
+            android:label="UpdateDiary"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>

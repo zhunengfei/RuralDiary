@@ -48,7 +48,7 @@ public class CreateDiaryPresenterImpl implements CreateDiaryPresenter{
      * 插入日记
      * @param diary
      */
-    public void onInsertDiary(Diary diary) {
+    private void onInsertDiary(Diary diary) {
         iDiary.insertDiary(diary);
         showInfo("添加日记成功!");
     }
